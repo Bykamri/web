@@ -1,8 +1,8 @@
 ---
-import BaseHead from "@/components/BaseHead.astro";
 import Header from "@/components/layouts/Header.astro";
 import Footer from "@/components/layouts/Footer.astro";
 import ThemeProvider from "@/components/ThemeProvider.astro";
+import "../styles/app.css";
 
 interface Props {
   title: string;
@@ -15,7 +15,35 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} />
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>{title}</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <meta content={title} name="title" />
+    <meta content={description} name="description" />
   </head>
   <body class="flex justify-center bg-background max-h-full">
     <ThemeProvider />

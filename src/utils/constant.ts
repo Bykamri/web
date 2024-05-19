@@ -1,20 +1,70 @@
-export const socials = [
-    // {
-    //     icon: "mdi:map-marker",
-    //     href: "/",
-    //     username: "Surabaya, East Java",
-    // },
-    {
-        slot: "icon",
-        icons: "map-pin",
-        title: "Surabaya",
+export const info = {
+    baseUrl: "https://astro-portfolio-uzair.vercel.app",
+    name: "Muhammad Afrizal Suhartono",
+    image: "/favicon/android-chrome-384x384.png",
+    jobDescription: "Fresh Graduate",
+    about: ``,
+
+    experience: [
+        {
+            name: "InterNative Labs, LLC",
+            location: "Karāchi, Sindh, Pakistan",
+            startDate: "Apr 2022",
+            endDate: "Present",
+            description: [
+                "- Developing screens and UI components for the web application using React and Tailwind.",
+                "- Fixing UI issues and integrating backend APIs with Redux Saga.",
+            ],
+        },
+    ],
+
+    education: [
+        {
+            name: "Madrasah Aliyah Negeri 3 Jombang",
+            location: "Jombang, East Java, Indonesia",
+            startDate: "June 2020",
+            endDate: "May 2023",
+            description: ["Language and Literature Class"],
+        },
+
+    ],
+
+    socialMedia: {
+        github: "https://github.com/Bykamri",
+        linkedin: "https://www.linkedin.com/in/mafrizal-suhartono/",
     },
-    {
-        slot: "icon",
-        icons: "linkedin",
-        href: "https://www.linkedin.com/in/mafrizal-suhartono/",
-        title: "Connect on Linkedin",
-        target: "_blank",
-        as: "a"
-    }
-]
+
+    projects: [
+        {
+            title: "Astro Portfolio",
+            isFeatured: true,
+            thumbnail: "src/assets/astro-portfolio.png",
+            githubUrl: "https://github.com/uzzii-21/astro-portfolio",
+            liveUrl: "https://astro-portfolio-uzair.vercel.app/",
+            techs: [
+                "Kotlin", "Dagger", "MVVM"
+            ]
+        },
+        {
+            title: "Astro Portfolio",
+            isFeatured: false,
+            thumbnail: "src/assets/astro-portfolio.png",
+            githubUrl: "https://github.com/uzzii-21/astro-portfolio",
+            liveUrl: "https://astro-portfolio-uzair.vercel.app/",
+            techs: [
+                "Kotlin", "Dagger", "MVVM"
+            ]
+        },
+        {
+            title: "Astro Portfolio",
+            isFeatured: false,
+            thumbnail: "src/assets/astro-portfolio.png",
+            githubUrl: "https://github.com/uzzii-21/astro-portfolio",
+            liveUrl: "https://astro-portfolio-uzair.vercel.app/",
+            techs: [
+                "Kotlin", "Dagger", "MVVM"
+            ]
+        },
+
+    ],
+};

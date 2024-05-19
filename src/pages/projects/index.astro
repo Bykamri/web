@@ -1,0 +1,14 @@
+---
+import { info } from "src/utils/constant";
+import Layout from "@/layouts/BaseLayout.astro";
+import Wrapper from "@/components/Wrapper.astro";
+
+const Projects = info.projects.map((project) => project);
+---
+
+<Layout title="Projects">
+  <section>
+    <h1 class="text-5xl font-semibold mb-4">Projects</h1>
+    <Wrapper projects={Projects} />
+  </section>
+</Layout>

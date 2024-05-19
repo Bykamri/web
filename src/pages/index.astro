@@ -1,37 +1,82 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
-import Card from "../components/Card.astro";
 import Label from "@/components/Label.astro";
 import Section from "@/components/Section.astro";
-import ProjectCard from "@/components/ProjectCard.astro";
-
-import { Image } from "astro:assets";
-import astro from "@/assets/profile.jpg";
+import Experience from "@/components/Experience.astro";
+import { info } from "../utils/constant";
 import { Icon } from "astro-icon/components";
+import Wrapper from "@/components/Wrapper.astro";
+
+import { type IProject } from "src/utils/type";
+
+const featureProjects: IProject[] = info.projects.reduce<IProject[]>(
+  (accumulator, project) => {
+    if (accumulator.length < 6 && project.isFeatured) {
+      accumulator.push(project);
+    }
+    return accumulator;
+  },
+  []
+);
 ---
 
 <Layout title="404 Error ">
-  <div
-    class="px-4 py-10 text-center sm:px-6 lg:px-8 size-full flex flex-col justify-center"
-  >
-    <h1 class="block text-7xl font-bold sm:text-9xl">404</h1>
-    <p class="mt-3 text-muted-foreground">Oops, something went wrong.</p>
-    <p class="">Sorry, we couldn't find your page.</p>
-    <!-- <Button title='Back to home' href='/' style='button' class='mt-5'>
-			<svg
-				xmlns='http://www.w3.org/2000/svg'
-				width='14'
-				height='14'
-				viewBox='0 0 24 24'
-				slot='icon-after'
-				class='-scale-x-100'
-			>
-				<path
-					fill='currentColor'
-					d='m6.921 12.5l5.792 5.792L12 19l-7-7l7-7l.713.708L6.921 11.5H19v1z'
-				>
-				</path>
-			</svg>
-		</Button> -->
+  <div class="flex w-full flex-col gap-y-10">
+    <section class="flex flex-col items-center gap-y-7">
+      <img
+        src={info.image}
+        alt="img"
+        class="aspect-square rounded-full bg-[#FFBE98] p-2"
+        width={125}
+        loading="eager"
+      />
+      <div class="flex flex-col items-center gap-y-4">
+        <h1 class="text-center text-3xl font-bold">
+          Muhammad Afrizal Suhartono
+        </h1>
+
+        <div class="flex flex-wrap justify-center gap-x-7 gap-y-3">
+          <Label title={info.jobDescription}>
+            <Icon name="work" slot="icon" class="h-6 w-6" />
+          </Label>
+          <Label title="Surabaya">
+            <Icon name="map-pin" slot="icon" class="h-6 w-6" />
+          </Label>
+          <Label
+            title="Contact Me"
+            as="a"
+            href={info.socialMedia.linkedin}
+            target="_blank"
+          >
+            <Icon name="email" slot="icon" class="h-7 w-7" />
+          </Label>
+        </div>
+      </div>
+    </section>
+
+    <Section title="About">
+      <p class="text-justify text-muted-foreground">
+        As a recent senior high school graduate with a keen interest in backend
+        development, I am enthusiastic about embarking on a journey to expand my
+        technical skills and knowledge. Eager to learn and contribute, I am
+        excited to delve into the world of coding, databases, and server-side
+        technologies. My passion for problem-solving and creating efficient
+        systems drives me to explore opportunities that will allow me to
+        collaborate with experienced professionals in the field
+      </p>
+    </Section>
+
+    <!-- <Section title="Experience">
+      <Experience details={info.experience} />
+    </Section> -->
+
+    <Section title="Education">
+      <Experience details={info.education} />
+    </Section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-6">Feature Projects</h2>
+      <Wrapper projects={featureProjects} />
+    </section>
   </div>
 </Layout>

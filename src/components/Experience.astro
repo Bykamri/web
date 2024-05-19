@@ -1,0 +1,24 @@
+---
+const { details } = Astro.props;
+---
+
+<div class="w-full">
+  {
+    details.map((item: any) => (
+      <div class="mb-5 py-3 px-5 relative rounded-2xl border border-border bg-primary-foreground">
+        <div class="flex justify-between flex-wrap flex-initial">
+          <h3 class="text-xl font-semibold">{item.name}</h3>
+          <p class="text-muted-foreground">
+            {item.startDate} - {item.endDate}
+          </p>
+        </div>
+        <p class="text-muted-foreground">{item.location}</p>
+        <ul>
+          {item.description.map((item: any) => (
+            <li class="dark:text-gray">{item}</li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</div>
