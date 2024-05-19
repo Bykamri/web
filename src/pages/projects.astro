@@ -3,12 +3,12 @@ import { info } from "src/utils/constant";
 import Layout from "@/layouts/BaseLayout.astro";
 import Wrapper from "@/components/Wrapper.astro";
 
-const Projects = info.projects.map((project) => project);
+const projects = info.projects.map((props) => props);
 ---
 
 <Layout title="Projects">
   <section>
     <h1 class="text-5xl font-semibold mb-4">Projects</h1>
-    <Wrapper projects={Projects} />
+    <Wrapper projects={projects} />
   </section>
 </Layout>
