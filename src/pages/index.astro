@@ -5,19 +5,19 @@ import Section from "@/components/Section.astro";
 import Experience from "@/components/Experience.astro";
 import { info } from "../utils/constant";
 import { Icon } from "astro-icon/components";
-import Wrapper from "@/components/Wrapper.astro";
+// import Wrapper from "@/components/Wrapper.astro";
 
-import { type IProject } from "src/utils/type";
+// import { type IProject } from "src/utils/type";
 
-const featureProjects: IProject[] = info.projects.reduce<IProject[]>(
-  (accumulator, project) => {
-    if (accumulator.length < 6 && project.isFeatured) {
-      accumulator.push(project);
-    }
-    return accumulator;
-  },
-  []
-);
+// const featureProjects: IProject[] = info.projects.reduce<IProject[]>(
+//   (accumulator, project) => {
+//     if (accumulator.length < 6 && project.isFeatured) {
+//       accumulator.push(project);
+//     }
+//     return accumulator;
+//   },
+//   []
+// );
 ---
 
 <Layout title="Home">
@@ -74,9 +74,9 @@ const featureProjects: IProject[] = info.projects.reduce<IProject[]>(
       <Experience details={info.education} />
     </Section>
 
-    <section>
+    <!-- <section>
       <h2 class="text-2xl font-semibold mb-6">Feature Projects</h2>
       <Wrapper projects={featureProjects} />
-    </section>
+    </section> -->
   </div>
 </Layout>
