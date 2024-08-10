@@ -26,7 +26,13 @@ export const info = {
             endDate: "May 2023",
             description: ["Language and Literature Class"],
         },
-
+        {
+            name: "Universitas 17 Agustus 1945 Surabaya",
+            location: "Surabaya, East Java, Indonesia",
+            startDate: "August 2024",
+            endDate: "Present",
+            description: ["Bachelor Informatics"],
+        },
     ],
 
     socialMedia: {
