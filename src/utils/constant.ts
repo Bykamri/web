@@ -19,20 +19,20 @@ export const info = {
     ],
 
     education: [
-        {
-            name: "Madrasah Aliyah Negeri 3 Jombang",
-            location: "Jombang, East Java, Indonesia",
-            startDate: "June 2020",
-            endDate: "May 2023",
-            description: ["Language and Literature Class"],
-        },
-        {
+          {
             name: "Universitas 17 Agustus 1945 Surabaya",
             location: "Surabaya, East Java, Indonesia",
             startDate: "August 2024",
             endDate: "Present",
             description: ["Bachelor Informatics"],
         },
+        {
+            name: "Madrasah Aliyah Negeri 3 Jombang",
+            location: "Jombang, East Java, Indonesia",
+            startDate: "June 2020",
+            endDate: "May 2023",
+            description: ["Language and Literature Class"],
+        }
     ],
 
     socialMedia: {
