@@ -20,6 +20,7 @@ import { Icon } from "astro-icon/components";
 // );
 ---
 
+<!-- 
 <Layout title="Home">
   <div class="flex w-full flex-col gap-y-10">
     <section class="flex flex-col items-center gap-y-7">
@@ -66,17 +67,26 @@ import { Icon } from "astro-icon/components";
       </p>
     </Section>
 
-    <!-- <Section title="Experience">
+    <Section title="Experience">
       <Experience details={info.experience} />
-    </Section> -->
+    </Section>
 
     <Section title="Education">
       <Experience details={info.education} />
     </Section>
 
-    <!-- <section>
+    <section>
       <h2 class="text-2xl font-semibold mb-6">Feature Projects</h2>
       <Wrapper projects={featureProjects} />
-    </section> -->
+    </section>
+  </div>
+</Layout> -->
+<Layout title="404 Error ">
+  <div
+    class="px-4 py-10 text-center sm:px-6 lg:px-8 size-full flex flex-col justify-center"
+  >
+    <h1 class="block text-7xl font-bold sm:text-9xl">404</h1>
+    <p class="mt-3 text-muted-foreground">Oops, something went wrong.</p>
+    <p class="">Sorry, we couldn't find your page.</p>
   </div>
 </Layout>
